@@ -247,5 +247,3 @@ Este proyecto es de código abierto y está disponible bajo la licencia MIT.
 
 ## 👥 Autores
 
-Proyecto desarrollado como parte del curso de Minería de Datos.
-
