@@ -22,7 +22,6 @@ Desarrollar un sistema de predicción de deserción estudiantil aplicando técni
 4. Aplicar técnicas de preprocesamiento y transformación
 5. Construir y evaluar modelo de clasificación
 6. Desarrollar interfaz gráfica con Streamlit
-7. Documentar el proceso metodológico siguiendo CRISP-DM
 
 ## 📊 Métricas del Modelo
 
