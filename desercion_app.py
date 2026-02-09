@@ -1,12 +1,6 @@
 # =============================================================================
 # SISTEMA DE PREDICCIÓN DE DESERCIÓN ESTUDIANTIL
 # =============================================================================
-# Descripción: Aplicación web interactiva para predecir deserción estudiantil
-#              utilizando Machine Learning (KNN + SMOTE)
-# Metodología: CRISP-DM
-# Autor: [Tu Nombre]
-# Fecha: Febrero 2026
-# =============================================================================
 
 import streamlit as st
 import pandas as pd
@@ -819,3 +813,4 @@ elif opcion == "🔮 Predicción":
         )
         
         st.plotly_chart(fig, width="stretch")
+
