@@ -9,7 +9,6 @@ El proyecto incluye:
 - ✅ Técnica de balanceo **SMOTE** para mejorar la detección
 - ✅ Interfaz web interactiva con **Streamlit**
 - ✅ Visualizaciones con **Plotly** y análisis estadístico
-- ✅ Documentación completa siguiendo **CRISP-DM**
 
 ## 🎯 Objetivos
 
@@ -245,5 +244,8 @@ El **Recall alto (85-90%)** es fundamental porque:
 
 Este proyecto es de código abierto y está disponible bajo la licencia MIT.
 
-## 👥 Autores
+## Link de la app en Streamlit
+
+https://prediccion-desercion-estudiantil-o.streamlit.app/
+
 
