@@ -611,7 +611,7 @@ elif opcion == "📊 Análisis y Métricas":
 # ========================================
 # PÁGINA: PREDICCIÓN 
 # ========================================
-elif opcion == "🔮 Predicción":
+elif opcion == "🔮 Predicción Individual":
     st.markdown("<h1>🔮 Predicción de Riesgo </h1>", unsafe_allow_html=True)
     st.markdown("<hr>", unsafe_allow_html=True)
     
@@ -813,4 +813,5 @@ elif opcion == "🔮 Predicción":
         )
         
         st.plotly_chart(fig, width="stretch")
+
 
