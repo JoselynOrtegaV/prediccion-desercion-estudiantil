@@ -247,9 +247,9 @@ def cargar_datos():
     })
     
     # DEFINIR VARIABLE OBJETIVO DE DESERCIÓN
-    # Criterio: Promedio < 7.0 Y Asistencia < 70%
+    # Criterio: Promedio < 7.0 o Asistencia < 70%
     df["DESERCION"] = (
-         (df["PROMEDIO"] < 7) & (df["ASISTENCIA"] < 70)
+         (df["PROMEDIO"] < 7) | (df["ASISTENCIA"] < 70)
     ).astype(int)
     
     return df
@@ -443,7 +443,7 @@ if opcion == "💠 Inicio":
         font=dict(color='#e2e8f0')
     )
     
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
 # ========================================
 # PÁGINA: ANÁLISIS Y MÉTRICAS
@@ -461,7 +461,7 @@ elif opcion == "📊 Análisis y Métricas":
     st.markdown("<div class='custom-card'>", unsafe_allow_html=True)
     st.dataframe(
         df[["PROMEDIO", "ASISTENCIA"]].describe().round(2),
-        use_container_width=True
+        width="stretch"
     )
     st.markdown("</div>", unsafe_allow_html=True)
     
@@ -494,7 +494,7 @@ elif opcion == "📊 Análisis y Métricas":
             paper_bgcolor='#2d4a6f',
             font=dict(color='#e2e8f0')
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
     
     with col2:
         fig = px.histogram(
@@ -518,7 +518,7 @@ elif opcion == "📊 Análisis y Métricas":
             paper_bgcolor='#2d4a6f',
             font=dict(color='#e2e8f0')
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
     
     st.markdown("<hr>", unsafe_allow_html=True)
     
@@ -587,7 +587,7 @@ elif opcion == "📊 Análisis y Métricas":
             font=dict(color='#e2e8f0')
         )
         
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
     
     with col2:
         st.markdown("<h3>Interpretación</h3>", unsafe_allow_html=True)
@@ -615,10 +615,10 @@ elif opcion == "📊 Análisis y Métricas":
         """, unsafe_allow_html=True)
 
 # ========================================
-# PÁGINA: PREDICCIÓN INDIVIDUAL
+# PÁGINA: PREDICCIÓN 
 # ========================================
-elif opcion == "🔮 Predicción Individual":
-    st.markdown("<h1>🔮 Predicción de Riesgo Individual</h1>", unsafe_allow_html=True)
+elif opcion == "🔮 Predicción":
+    st.markdown("<h1>🔮 Predicción de Riesgo </h1>", unsafe_allow_html=True)
     st.markdown("<hr>", unsafe_allow_html=True)
     
     st.markdown("""
@@ -662,7 +662,7 @@ elif opcion == "🔮 Predicción Individual":
     
     col1, col2, col3 = st.columns([1, 1, 1])
     with col2:
-        predecir_btn = st.button("🔮 Predecir Riesgo", type="primary", use_container_width=True)
+        predecir_btn = st.button("🔮 Predecir Riesgo", type="primary", width="stretch")
     
     if predecir_btn:
         # Preparar datos para predicción
@@ -764,7 +764,7 @@ elif opcion == "🔮 Predicción Individual":
             
             st.markdown("<div class='custom-card'>", unsafe_allow_html=True)
             st.markdown("<h3 style='margin-top: 0; color: #000000;'>Comparación</h3>", unsafe_allow_html=True)
-            st.dataframe(comparacion.round(2), use_container_width=True, hide_index=True)
+            st.dataframe(comparacion.round(2), width="stretch", hide_index=True)
             st.markdown("</div>", unsafe_allow_html=True)
         
         with col2:
@@ -818,4 +818,4 @@ elif opcion == "🔮 Predicción Individual":
             font=dict(color='#e2e8f0')
         )
         
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
