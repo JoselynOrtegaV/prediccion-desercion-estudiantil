@@ -57,7 +57,7 @@ Desarrollar un sistema de predicción de deserción estudiantil aplicando técni
 ```
 proyecto-desercion/
 │
-├── app.py                                   
+├── desercion_app.py                                   
 ├── REPORTE_RECORD_ESTUDIANTIL_ANONIMIZADO.csv 
 ├── requirements.txt                          
 ├── README.md                                
@@ -166,7 +166,7 @@ La aplicación cuenta con tres módulos principales:
 
 ## 📝 Documentación Adicional
 
-- **Código Comentado**: `app.py`
+- **Código Comentado**: `desercion_app.py`
 - **Dataset**: `REPORTE_RECORD_ESTUDIANTIL_ANONIMIZADO.csv`
 
 ## 📄 Licencia
