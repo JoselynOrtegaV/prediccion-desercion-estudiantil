@@ -57,12 +57,12 @@ Desarrollar un sistema de predicción de deserción estudiantil aplicando técni
 ```
 proyecto-desercion/
 │
-├── app.py                                    # Aplicación principal Streamlit
-├── REPORTE_RECORD_ESTUDIANTIL_ANONIMIZADO.csv  # Dataset (no incluido)
-├── requirements.txt                          # Dependencias del proyecto
-├── README.md                                 # Este archivo
+├── app.py                                   
+├── REPORTE_RECORD_ESTUDIANTIL_ANONIMIZADO.csv 
+├── requirements.txt                          
+├── README.md                                
 │
-└── .gitignore                               # Archivos ignorados por Git
+└── .gitignore                              
 ```
 
 ## 🚀 Instalación y Configuración
@@ -138,40 +138,6 @@ La aplicación cuenta con tres módulos principales:
   - Análisis comparativo con promedios generales
   - Importancia relativa de variables
 
-## 🧮 Metodología CRISP-DM
-
-El proyecto sigue las seis fases de CRISP-DM:
-
-### 1. Comprensión del Negocio
-- Identificación del problema de deserción estudiantil
-- Definición de objetivos y criterios de éxito
-- Énfasis en recall para minimizar falsos negativos
-
-### 2. Comprensión de los Datos
-- Análisis exploratorio del dataset
-- Identificación de variables relevantes
-- Evaluación de calidad de datos
-
-### 3. Preparación de los Datos
-- Limpieza de datos (valores nulos, formatos)
-- Definición de variable objetivo: `DESERCION = 1 si (PROMEDIO < 7.0 Y ASISTENCIA < 70%)`
-- Normalización con StandardScaler
-- División train/test estratificada (70/30)
-
-### 4. Modelado
-- Algoritmo seleccionado: **K-Nearest Neighbors (KNN)**
-- Parámetros: `n_neighbors=5`, `weights='distance'`
-- Técnica de balanceo: **SMOTE** para manejar desbalance de clases
-
-### 5. Evaluación
-- Métricas: Accuracy, Precision, Recall, F1-Score
-- Matriz de confusión
-- Validación en conjunto de prueba
-
-### 6. Despliegue
-- Aplicación web interactiva con Streamlit
-- Sistema de predicción en tiempo real
-- Visualizaciones y recomendaciones
 
 ## 📈 Variables del Modelo
 
@@ -196,43 +162,6 @@ El proyecto sigue las seis fases de CRISP-DM:
 - **Cards informativas** con métricas destacadas
 - **Responsive design** adaptable a diferentes pantallas
 - **Estilo personalizado** con CSS
-
-## 📊 Interpretación de Resultados
-
-### Matriz de Confusión
-- **Verdaderos Negativos (TN)**: Estudiantes sin riesgo correctamente identificados
-- **Falsos Positivos (FP)**: Estudiantes sin riesgo marcados como en riesgo (falsa alarma)
-- **Falsos Negativos (FN)**: ⚠️ **CRÍTICO** - Estudiantes en riesgo NO detectados
-- **Verdaderos Positivos (TP)**: Estudiantes en riesgo correctamente detectados
-
-### Por qué priorizamos el Recall
-El **Recall alto (85-90%)** es fundamental porque:
-- Minimiza estudiantes en riesgo no detectados (FN)
-- Permite intervenciones tempranas
-- Algunas falsas alarmas (FP) son preferibles a casos perdidos
-- Facilita apoyo preventivo a más estudiantes
-
-
-
-## 🌟 Mejoras Futuras
-
-### Modelo
-- [ ] Incorporar variables adicionales (socioeconómicas, participación)
-- [ ] Probar algoritmos alternativos (Random Forest, XGBoost, Redes Neuronales)
-- [ ] Implementar validación cruzada
-- [ ] Optimización de hiperparámetros con Grid Search
-
-### Interfaz
-- [ ] Carga de archivos CSV personalizados
-- [ ] Exportación de reportes en PDF
-- [ ] Sistema de alertas automáticas
-- [ ] Análisis de tendencias temporales
-
-### Despliegue
-- [ ] Contenedorización con Docker
-- [ ] Despliegue en la nube (Heroku, AWS, Google Cloud)
-- [ ] API REST para integración con otros sistemas
-- [ ] Aplicación móvil
 
 
 ## 📝 Documentación Adicional
